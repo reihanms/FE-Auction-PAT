@@ -1,15 +1,12 @@
-import React from "react";
+import { useNavigate } from "react-router-dom"
 
-class Landingpage extends React.Component {
-    constructor(props){
-        super(props);
-    }
-    render(){
-        return(
+const Landing = () => {
+    const navigate = useNavigate()
+  return (
             <>
                 <header id="header" class="header d-flex align-items-center fixed-top">
                     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-                        <a href="index.html" class="logo d-flex align-items-center">
+                        <a href="#" class="logo d-flex align-items-center">
                         <img src="landingpage/img/logo/Logo.png" alt="Image" class="img-fluid" style={{ width: "110px"}}/>
                         </a>
                         <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
@@ -27,8 +24,8 @@ class Landingpage extends React.Component {
                             <p>Bid boldly, and let the canvas of creativity unfold before your eyes.</p>
                             </blockquote>
                             <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
-                            <a href="#about" class="btn-get-started">Register Here</a>
-                            <a href="#about" class="btn-get-login">Login Now</a>
+                                <button onClick={()=> navigate('/register')} class="btn-get-started">Register Here</button>
+                                <button onClick={()=> navigate('/login')}  class="btn-get-login">Login Now</button>
                             </div>
 
                         </div>
@@ -36,8 +33,7 @@ class Landingpage extends React.Component {
                     </div>
                 </section>
             </>
-        )
-    }
+    )
 }
 
-export default Landingpage;
+export default Landing
