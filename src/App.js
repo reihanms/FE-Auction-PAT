@@ -1,22 +1,18 @@
-import React from "react";
-import Landingpage from "./Component/Landingpage";
-import HomePage from "./Component/homepage/HomePage";
+import React from 'react'
+import Landingpage from './Pages/Landingpage'
+import Loginpage from './Pages/Loginpage'
 
-class App extends React.Component{
-  constructor(props){
-   super (props);
-  }
-  
-  render(){
-    return(
-      <>
-       {/* Landing Page*/}
-      <HomePage/>
-       {/* <Name/> */}
-       {/* <Landingpage/> */}
-      </>
-    )
-  }
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+
+const App = () => {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Landingpage/>}/>
+        <Route path="/login" element={<Loginpage/>}/>
+      </Routes>
+    </Router>
+  )
 }
 
-export default App;
+export default App
