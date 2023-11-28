@@ -1,5 +1,6 @@
 import React from "react";
 import Landingpage from "./Component/Landingpage";
+import HomePage from "./Component/homepage/HomePage";
 
 class App extends React.Component{
   constructor(props){
@@ -10,7 +11,9 @@ class App extends React.Component{
     return(
       <>
        {/* Landing Page*/}
-       <Landingpage/>
+      <HomePage/>
+       {/* <Name/> */}
+       {/* <Landingpage/> */}
       </>
     )
   }
