@@ -1,0 +1,105 @@
+/*Login Register disatuin*/
+  
+  .logo-container {
+    position: absolute;
+    top: 30px; /* Sesuaikan jarak dari atas */
+    left: 50px; /* Sesuaikan jarak dari kiri */
+  }
+  
+  .logo {
+    width: 150px; /* Sesuaikan lebar logo */
+    height: auto; /* Sesuaikan tinggi logo */
+  }
+  
+  .form-{
+    width: 50%;
+    max-width: 600px; /* Menentukan lebar maksimum untuk menjaga responsifitas */
+    margin: 0 auto; /* Menggunakan margin: 0 auto untuk menengahkan elemen */
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 1);
+    padding: 20px; /* Menambahkan padding agar konten tidak terlalu dekat dengan tepi */
+    box-sizing: border-box; /* Menjamin bahwa padding tidak akan menambah lebar elemen */
+    display: flex;
+    margin-top: 70px;
+    flex-direction: column;
+    justify-content: center; /* Menengahkan elemen secara vertikal */
+    align-items: center; /* Menengahkan elemen secara horizontal */
+  }
+  
+  h1 {
+    text-align: center;
+    font-family: Poppins;
+    font-style: bold;
+    color: #3D524B;
+  }
+
+  input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    border-radius: 15px;
+  }
+
+  .spacer{
+    max-width: 100%;
+    display: "grid";
+    margin-top: 30px;
+  }
+  
+  .line-container {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .line-container::before,
+  .line-container::after {
+    content: "";
+    display: inline-block;
+    width: 100px;
+    border-top: 1px solid #000; /* Warna garis dapat disesuaikan */
+    margin: 0 10px;
+  }
+  
+  input[type="submit"] {
+    background-color: #3D524B;
+    color: white;
+    cursor: pointer;
+    border-radius: 15px;
+    transition: background-color 0.3s ease;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #9CBBB3; /* Ganti warna latar belakang saat dihover */
+  }
+  
+
+  .google-login-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 20px;
+    border: 1px solid #040405; /* Warna garis border */
+    border-radius: 15px; /* Membuat sudut elemen menjadi lebih melengkung */
+    background-color: #fbfbfc; /* Warna latar belakang */
+    color: #070707; /* Warna teks */
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Efek transisi saat hover */
+  }
+  
+  .google-login-button:hover {
+    background-color: #9CBBB3; /* Warna latar belakang saat dihover */
+  }
+  
+  .google-icon {
+    width: 24px; /* Ukuran gambar icon */
+    height: 24px;
+    margin-right: 10px; /* Jarak antara icon dan teks */
+  }
+  
+  
+
+  
