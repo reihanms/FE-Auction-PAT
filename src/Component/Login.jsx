@@ -21,6 +21,7 @@ const Login = () => {
                 <img src="assets/icon-google.png" alt="Google Icon" class="google-icon" value='Login With Google' />
                 <b>Continue with Google</b>
               </button>
+              <p style={{ fontFamily:"Poppins", textAlign:"center" }}>Don't have account? <b style={{ color:"#3D524B" }}>Sign up</b></p>
             </div>
           </form>
         </div>
