@@ -12,12 +12,7 @@ export default function HomePage(){
 
 function ItemContainer(){
     return(
-        <div style={{backgroundColor: "#3D524B", margin: "15px", padding: "15px", borderRadius: "25px"}}>
-            <Item/>
-            <Item/>
-            <Item/>
-            <Item/>
-            <Item/>
+        <div class="item-container">
             <Item/>
             {/* looping for auction items here */}
         </div>
@@ -26,14 +21,7 @@ function ItemContainer(){
 
 function Item(){
     return(
-        <div style={{
-                backgroundColor: "#9CBBB3",
-                borderRadius: "25px",
-                margin: "20px",
-                padding: "20px",
-                display: "grid",
-                gridTemplateColumns: "repeat(3, 1fr)"
-            }}>
+        <div className="item">
             {/* Ini nanti gambarnya dinamis */}
             <img src="landingpage/img/logo/Logo.png" alt="Image" class="img-fluid" style={{ width: "110px", margin: "auto"}}/>
             <div>
