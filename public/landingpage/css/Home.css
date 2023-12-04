@@ -1,15 +1,24 @@
+.body {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
 .header {
     background-color: #3D524B;
     padding: 7px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-  }
-  .header-text{
+}
+.header-text{
     color:#FFFFFF;
-  }
+}
 
+.header-logo {
+    height: 60px;
+    margin: auto;
+}
 
-.item-container{
+.content-container{
     background-color: #3D524B;
     margin: 15px;
     padding: 15px;
@@ -23,4 +32,50 @@
     padding: 20px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+}
+
+.item-tool{
+    text-align: center;
+    border-radius: 25px;
+    margin: 20px;
+    padding: 60px;
+    min-height: 120px;
+    background-color: #9CBBB3;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.footer {
+    display: grid;
+    background-color: #3D524B;
+    padding: 7px;
+    min-height: 15vh;
+}
+
+.footer-icons {
+    display: grid;
+    margin: auto;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+.footer-text {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #FFFFFF;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+
+.footer-icon {
+    height: 40px;
+}
+
+.search {
+    background-image: url('/home/saifer/FE-Auction-PAT/public/assets/search-image.png');
+    margin: 15px;
+    padding: 15px;
+    border-radius: 25px;
 }
