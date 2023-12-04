@@ -4,6 +4,9 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
+  .header-text{
+    color:#FFFFFF;
+  }
 
 
 .item-container{

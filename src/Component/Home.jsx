@@ -38,12 +38,12 @@ function Item(){
 
 function Header(){
     return(
-            <div style={{backgroundColor: "#3D524B", padding: "7px", display: "grid", gridTemplateColumns: "repeat(2, 1fr)"}}>
+            <div className="header">
                 <div>
                 <img src="assets/av-logo.png" alt="Image" class="img-fluid" style={{ height: "60px", margin: "auto"}}/>
                 </div>
                 <div style={{display: "grid", gridTemplateColumns: "repeat(2, 1fr)", marginLeft: "auto", marginEnd: "0px"}}>
-                    <h1>Username</h1>
+                    <h1 className="header-text">Username</h1>
                     <img src="assets/profile.png" alt="Image" class="img-fluid" style={{ height: "60px", margin: "auto"}}/>
                 </div>
             </div>
