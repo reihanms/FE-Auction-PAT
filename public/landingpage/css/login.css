@@ -47,19 +47,30 @@
     margin-top: 30px;
   }
   
-  .line-container {
-    text-align: center;
-    margin: 20px 0;
-  }
-  
+ .line-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.line-container::before,
+.line-container::after {
+  content: "";
+  display: inline-block;
+  width: 20%; /* Sesuaikan dengan persentase yang diinginkan */
+  max-width: 100px; /* Atur lebar maksimum jika diperlukan */
+  border-top: 1px solid #000; /* Warna garis dapat disesuaikan */
+  margin: 0 5%; /* Sesuaikan dengan persentase yang diinginkan */
+}
+
+@media (max-width: 600px) {
+  /* Untuk layar berukuran kecil, atur lebar dan margin sesuai kebutuhan */
   .line-container::before,
   .line-container::after {
-    content: "";
-    display: inline-block;
-    width: 100px;
-    border-top: 1px solid #000; /* Warna garis dapat disesuaikan */
-    margin: 0 10px;
+    width: 40%;
+    margin: 0 3%;
   }
+}
+
   
   input[type="submit"] {
     background-color: #3D524B;
