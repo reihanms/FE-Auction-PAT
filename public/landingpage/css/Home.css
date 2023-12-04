@@ -1,15 +1,23 @@
+.header {
+    background-color: #3D524B;
+    padding: 7px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
 .item-container{
-    background-color: "#3D524B";
-    margin: "15px";
-    padding: "15px";
-    border-radius: "25px";
+    background-color: #3D524B;
+    margin: 15px;
+    padding: 15px;
+    border-radius: 25px;
 }
 
 .item{
-    background-color: "#9CBBB3";
-    border-radius: "25px";
-    margin: "20px";
-    padding: "20px";
-    display: "grid";
-    grid-template-columns: "repeat(3, 1fr)";
+    background-color: #9CBBB3;
+    border-radius: 25px;
+    margin: 20px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
