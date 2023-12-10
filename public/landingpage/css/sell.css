@@ -1,3 +1,10 @@
+html, body{
+  margin: 0;
+  display: grid;
+  grid-template-rows: 1fr auto; /* 1fr for content, auto for footer */
+  min-height: 100vh;
+}
+
 .item-container-sell {
     display: flex;
     justify-content: space-between; /* Mengatur agar elemen diatur sejajar */
@@ -18,7 +25,7 @@
   }
 
   .item-container-buy {
-    display: flex;
+    flex: 1 0 auto;
     justify-content: space-between; /* Mengatur agar elemen diatur sejajar */
     align-items: center; /* Mengatur agar elemen berada di tengah secara vertikal */
     background-color: #fff;

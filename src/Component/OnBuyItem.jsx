@@ -1,19 +1,11 @@
 import React from 'react'
+import { Footer } from './Footer'
+import { Header } from './Header'
 
 export const OnBuyItem = () => {
   return (
     <>
-      {/* header */}
-      <div className='header'>
-        <div>
-          <img src="assets/av-logo.png" alt="Image" class="img-fluid" style={{ height: "60px", margin: "auto"}}/>
-        </div>
-        <div style={{display: "grid", gridTemplateColumns: "repeat(2, 1fr)", marginLeft: "auto", marginEnd: "0px"}}>
-          <h1 className="header-text">Username</h1>
-          <img src="assets/profile.png" alt="Image" class="img-fluid" style={{ height: "60px", margin: "auto"}}/>
-        </div>
-      </div>
-
+      <Header/>
       {/* konten */}
       <div className="item-container-buy">
         <div className='deskripsi'>
@@ -63,6 +55,7 @@ export const OnBuyItem = () => {
           <input type="text" class='in'/>
         </div> 
       </div>
+      <Footer/>
     </>
   )
 }

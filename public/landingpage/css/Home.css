@@ -1,13 +1,17 @@
 .body {
-    margin-left: 5%;
-    margin-right: 5%;
+    margin: 0;
+    display: grid;
+    grid-template-rows: 1fr auto; /* 1fr for content, auto for footer */
+    min-height: 100vh;
 }
 
 .header {
+    flex-shrink: none;
     background-color: #3D524B;
     padding: 7px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    max-height: 15vh;
 }
 .header-text{
     color:#FFFFFF;
@@ -16,6 +20,10 @@
 .header-logo {
     height: 60px;
     margin: auto;
+}
+
+.content{
+    flex: 1 auto;
 }
 
 .content-container{
@@ -47,6 +55,7 @@
 }
 
 .footer {
+    flex-shrink: none;
     display: grid;
     background-color: #3D524B;
     padding: 7px;
