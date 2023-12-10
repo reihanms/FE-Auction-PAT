@@ -19,11 +19,11 @@ const Registerpage = () => {
           </div>
          
           <form action="/login" method="post">
-            <input type="text" name="notelp" placeholder="Phone Number" />
-            <input type="text" name="username" placeholder="Username" />
-            <input type="password" name="password" placeholder="Password" />
+            <input type="text" className='logreg' name="notelp" placeholder="Phone Number" />
+            <input type="text" className='logreg' name="username" placeholder="Username" />
+            <input type="password" className='logreg' name="password" placeholder="Password" />
           </form><br />
-            <input type="submit" value="Login" />
+            <input type="submit" className='logreg' value="Login" />
         </div>
       </div>
       

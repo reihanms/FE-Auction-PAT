@@ -1,9 +1,8 @@
 import React from 'react'
+import CreateAuction from '../Component/CreateAuction'
 
 const CreateAuctionPage = () => {
-  return (
-    <div>CreateAuctionPage</div>
-  )
+  return <CreateAuction/>
 }
 
 export default CreateAuctionPage

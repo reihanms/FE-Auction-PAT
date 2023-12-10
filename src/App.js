@@ -3,7 +3,10 @@ import Landingpage from './Pages/Landingpage'
 import Loginpage from './Pages/Loginpage'
 import Registerpage from './Pages/Registerpage'
 import HomePage from './Pages/HomePage'
-import CreateAuction from './Component/CreateAuction'
+import CreateAuctionPage from './Pages/CreateAuctionPage'
+import { BuyItemPage } from './Pages/BuyItemPage'
+import { OnBuyItemPage } from './Pages/OnBuyItemPage'
+import { BuyFinishedPage } from './Pages/BuyFinishedPage'
 
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 
@@ -15,7 +18,10 @@ const App = () => {
         <Route path="/login" element={<Loginpage/>}/>
         <Route path="/register" element={<Registerpage/>}/>
         <Route path="/home" element={<HomePage/>}/>
-        <Route path="/create" element={<CreateAuction/>}/>
+        <Route path="/create" element={<CreateAuctionPage/>}/>
+        <Route path="/buyitem" element={<BuyItemPage/>}/>
+        <Route path="/onbuyitem" element={<OnBuyItemPage/>}/>
+        <Route path="/BuyFinished" element={<BuyFinishedPage/>}/>
       </Routes>
     </Router>
   )
