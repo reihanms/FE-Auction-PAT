@@ -23,32 +23,42 @@
 }
 
 .content{
-    flex: 1 auto;
+    flex: 1 0 auto;
 }
 
 .content-container{
     background-color: #3D524B;
     margin: 15px;
-    padding: 15px;
-    border-radius: 25px;
+    border-radius: 10px;
     display: grid;
+    overflow: auto;
+    max-height: 95vh;
+    min-height: 95vh;
+}
+
+.item-image{
+    max-width: 100px;
+    min-width: 100px;
 }
 
 .item{
+    font-size: small;
     background-color: #9CBBB3;
-    border-radius: 25px;
+    border-radius: 10px;
     margin: 20px;
     padding: 20px;
     display: grid;
+    max-height: 150px;
     grid-template-columns: repeat(3, 1fr);
 }
 
 .item-tool{
     text-align: center;
-    border-radius: 25px;
-    margin: 20px;
-    padding: 60px;
-    min-height: 120px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 5%;
+    min-height: 15vh;
     background-color: #9CBBB3;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -83,9 +93,123 @@
     height: 40px;
 }
 
-.search {
-    background-image: url('/home/saifer/FE-Auction-PAT/public/assets/search-image.png');
-    margin: 15px;
+input[type="text"] {
+    color: #3D524B;        /* Warna teks */
+    background: #9CBBB3; /* Warna latar belakang */
+    border: 1px solid #3D524B; /* Warna border */
+    padding: 5px;       /* Ruang di dalam input */
+    border-radius: 10px; /* Sudut melengkung pada border */
+    min-width: 200px;
     padding: 15px;
-    border-radius: 25px;
+}
+
+.search-container {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    text-align: center;
+    min-height: 15vh;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-image: url('/assets/search-image.png');
+    background-size: 100%;
+    border-radius: 10px;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.user-search-container {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    text-align: center;
+    max-height: 10vh;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-image: url('/assets/search-image.png');
+    background-size: 100%;
+    border-radius: 10px;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.on-search-indicator{
+    margin: auto;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.menu-indicator{
+    position: absolute;
+    width: 75px;
+    padding-left: 20px;
+    padding-right: 20px;
+    top: 0;
+    left: 0;
+    background-color: #9CBBB3;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.invoice-container{
+    background-color: #FFFFFF;
+    border: 2px solid #3D524B;
+    margin: 15px;
+    padding: 5px;
+    border-radius: 10px;
+    display: grid;
+    overflow: auto;
+    max-height: 95vh;
+    min-height: 95vh;
+}
+
+.invoice-logo{
+    position: absolute;
+    max-height: 50px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.invoice-header{
+    text-decoration: underline;
+    margin: 50px;
+}
+
+.invoice-body{
+    align-items: center;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.invoice-table-item{
+    width: 100%;
+}
+
+.invoice-table-summary{
+    margin-top: 50px;
+    width: 100%;
+    border-top: 2px solid #3D524B;
+    border-bottom: 2px solid #3D524B;
+}
+
+.text-right{
+    text-align: end;
+}
+
+.text-left{
+    text-align: start;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.invoice-text-total{
+    margin-top: 20px;
+    color: #A37E2C;
+    position: sticky;
 }
