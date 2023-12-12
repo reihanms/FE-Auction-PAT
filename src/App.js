@@ -9,6 +9,7 @@ import { OnBuyItemPage } from './Pages/OnBuyItemPage'
 import { BuyFinishedPage } from './Pages/BuyFinishedPage'
 
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import { InvoicePage } from './Pages/InvoicePage'
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
         <Route path="/buyitem" element={<BuyItemPage/>}/>
         <Route path="/onbuyitem" element={<OnBuyItemPage/>}/>
         <Route path="/BuyFinished" element={<BuyFinishedPage/>}/>
+        <Route path="/invoice" element={<InvoicePage/>}/>
       </Routes>
     </Router>
   )
