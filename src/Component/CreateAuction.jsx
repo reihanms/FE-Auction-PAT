@@ -61,7 +61,7 @@ const CreateAuction = () => {
       </div><br />
       <div className="tombol">
         <button>CREATE AUCTION</button>
-      </div>
+      </div><br />
      <Footer/>
     </>
   )

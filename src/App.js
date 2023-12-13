@@ -7,9 +7,10 @@ import CreateAuctionPage from './Pages/CreateAuctionPage'
 import { BuyItemPage } from './Pages/BuyItemPage'
 import { OnBuyItemPage } from './Pages/OnBuyItemPage'
 import { BuyFinishedPage } from './Pages/BuyFinishedPage'
+import { InvoicePage } from './Pages/InvoicePage'
+import UserProfilePage from './Pages/UserProfilePage'
 
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
-import { InvoicePage } from './Pages/InvoicePage'
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
         <Route path="/login" element={<Loginpage/>}/>
         <Route path="/register" element={<Registerpage/>}/>
         <Route path="/home" element={<HomePage/>}/>
+        <Route path="/profile" element={<UserProfilePage/>}/>
         <Route path="/create" element={<CreateAuctionPage/>}/>
         <Route path="/buyitem" element={<BuyItemPage/>}/>
         <Route path="/onbuyitem" element={<OnBuyItemPage/>}/>
