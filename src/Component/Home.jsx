@@ -41,16 +41,20 @@ function Container(){
                         </div>
                         <img src="assets/bookmark-icon.png" alt="Make Auction" style={{ height: "50px", margin: "auto"}}/>
                     </div>
-                    <div className="item-tool">
+                    <div className="profile-item-tool">
                         <h3>Profile</h3>
                         <img src="assets/profile.png" alt="Your Profile" style={{ height: "50px", margin: "auto"}}/>
                     </div>
-                    <div className="item-tool">
+                    <div className="myaux-item-tool">
                         <h3>My Auction</h3>
                         <img src="assets/auction-icon.png" alt="Your Auction" style={{ height: "50px", margin: "auto"}}/>
                     </div>
-                    <div className="item-tool">
+                    <div className="mybid-item-tool">
                         <h3>My Bid</h3>
+                        <img src="assets/bid-icon.png" alt="Your Bid" style={{ height: "50px", margin: "auto"}}/>
+                    </div>
+                    <div className="winning-item-tool">
+                        <h3>Winning Bid</h3>
                         <img src="assets/bid-icon.png" alt="Your Bid" style={{ height: "50px", margin: "auto"}}/>
                     </div>
                 </div>
@@ -73,6 +77,7 @@ function Item(){
                 <h4>Current Price</h4>
                 <h4>Max Price</h4>
             </div>
+            
         </div>
     );
 }
