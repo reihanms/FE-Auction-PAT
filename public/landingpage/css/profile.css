@@ -19,26 +19,17 @@ body {
     z-index: -1;
   }
   
-  .profile-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: #fff; /* Warna teks */
-  }
-  
   .card-container {
-    position: relative;
+    position: absolute;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    height: 100vh;
+    top: 50;
   }
   
   .card {
-    max-width: 300px;
-    width: 100%;
+    left: 5vh;
+    position: absolute;
+    display: flex;
+    top: 20vh;
     margin: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
@@ -49,10 +40,9 @@ body {
   }
   
   .card-image {
-    width: 100%;
-    height: auto;
-    max-height: 200px;
-    object-fit: cover;
+    max-width: 30vh;
+    justify-content: center;
+    object-fit: fill;
   }
   
   .card-content {
@@ -61,18 +51,18 @@ body {
     color: #fff;
   }
   
-  @media screen and (max-width: 768px) {
+  @media screen and (min-width: 768px) {
     .card-container {
-      flex-direction: column; /* Ubah orientasi flex menjadi kolom pada layar kecil */
-      align-items: center; /* Sesuaikan align-items untuk tetap di tengah */
-      justify-content: center; /* Sesuaikan justify-content untuk tetap di tengah */
-      margin-top: 10px; /* Tambahkan margin-top untuk memberikan ruang antara card dengan elemen lain */
-      margin-left: 0; /* Reset margin-left untuk responsif */
+      padding: 10px; /* Reset margin-left untuk responsif */
     }
   
     .card {
       margin-top: 10px; /* Tambahkan margin-top untuk memberikan ruang antara card */
       margin-left: 0; /* Reset margin-left untuk responsif */
+    }
+
+    .card-image {
+      min-width: 30vh;
     }
   }
 
@@ -90,15 +80,131 @@ body {
 
 
   .profile-deskripsi-container {
+    position: absolute;
     background-color: #FFFFFF;
     border: 2px solid #3D524B;
-    margin: 15px;
     padding: 10px;
     border-radius: 10px;
-    display: start-end;
-    overflow: auto;
-    max-height: auto; /* Ubah max-height menjadi setengah tinggi layar */
-    min-height: 10vh; /* Ubah min-height menjadi setengah tinggi layar */
-    margin-top: -25%;
+    margin: 20px;
+    max-width: 110vh;
+    top: 40vh;
+    left: 35vh;
+  }
+
+  .profile-username {
+    font-family: Poppins;
+    position: absolute;
+    bottom: 0vh;
+    left: 50vh;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    color: #fff; /* Warna teks */
   }
   
+  .profile-button{
+    position: absolute;
+    top: 40vh;
+    left: 150vh;
+  }
+
+  .item-font {
+    color: #FFFFFF;
+    font-weight: bold;
+  }
+
+  .item-tool{
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 5%;
+    min-height: 10vh;
+    background-color: #9CBBB3;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    transition: background-color 0.3s;
+}
+.item-tool:hover{
+    background-color: #0077B6;
+}
+
+.profile-item-tool{
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 5%;
+    min-height: 10vh;
+    background-color: #416269;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    transition: background-color 0.3s;
+}
+.profile-item-tool:hover{
+    background-color: #0077B6;
+}
+
+.myaux-item-tool{
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 5%;
+    width: 50vh;
+    min-height: 10vh;
+    background-color: #5F8586;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    transition: background-color 0.3s;
+}
+.myaux-item-tool:hover{
+    background-color: #0077B6;
+}
+
+.mybid-item-tool{
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 5%;
+    width: 50vh;
+    min-height: 10vh;
+    background-color: #A37E2C;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    transition: background-color 0.3s;
+}
+.mybid-item-tool:hover{
+    background-color: #0077B6;
+}
+
+.winning-item-tool{
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 5%;
+    width: 50vh;
+    min-height: 10vh;
+    background-color: #006039;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    transition: background-color 0.3s;
+}
+.winning-item-tool:hover{
+    background-color: #0077B6;
+}
+
+
+.profile-icon-home {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.profile-logo {
+  max-width: 150px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}

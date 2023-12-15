@@ -6,12 +6,13 @@ export const UserProfile = () => {
         <>
             <div class="profile-container">
                 <img src="/assets/Banner.png" alt="Profile Background" class="profile-background-image"/>
-                    <div class="profile-content">
-                        <h1>Profil Anda</h1>
-                        <p>Deskripsi singkat mengenai Anda.</p>
-                    </div>
+                <img src="/assets/av-logo-white.png" alt="Home" className='profile-logo'/>
+                <img src="/assets/icon-home.png" alt="Home" className='profile-icon-home'/>
+                <div class="profile-username">
+                    <h2>Alfin M Ilmi</h2>
+                    <p>Jakarta</p>
+                </div>
             </div>
-
             <div class="card-container">
                 <div class="card">
                     <img src="/assets/Alfin.jpeg" alt="Card Image" class="card-image"/>
@@ -37,6 +38,23 @@ export const UserProfile = () => {
             <div className='profile-deskripsi-container'>
                 <h2>tes</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit non fugiat quo commodi molestiae tempora corporis ad, aliquid eum magnam iusto maxime labore magni laborum beatae corrupti illo nisi sed?</p>
+            </div>
+
+            <div className='profile-button'>
+                <div className="col-md-4">
+                    <div className="myaux-item-tool">
+                        <h3 className='item-font'>My Auction</h3>
+                        <img src="assets/auction-icon.png" alt="Your Auction" style={{ height: "50px", margin: "auto"}}/>
+                    </div>
+                    <div className="mybid-item-tool">
+                        <h3 className='item-font'>My Bid</h3>
+                        <img src="assets/bid-icon.png" alt="Your Bid" style={{ height: "50px", margin: "auto"}}/>
+                    </div>
+                    <div className="winning-item-tool">
+                        <h3 className='item-font'>Winning Bid</h3>
+                        <img src="assets/icon-announce.png" alt="Your Bid" style={{ height: "50px", margin: "auto"}}/>
+                    </div>
+                </div>
             </div>
            
             <br />

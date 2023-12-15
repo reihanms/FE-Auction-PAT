@@ -55,7 +55,7 @@ function Container(){
                     </div>
                     <div className="winning-item-tool">
                         <h3>Winning Bid</h3>
-                        <img src="assets/bid-icon.png" alt="Your Bid" style={{ height: "50px", margin: "auto"}}/>
+                        <img src="assets/icon-announce.png" alt="Your Bid" style={{ height: "50px", margin: "auto"}}/>
                     </div>
                 </div>
             </div>
