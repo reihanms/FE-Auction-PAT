@@ -159,7 +159,7 @@ html, body{
   }
 
   .tombol button:hover {
-    background-color: #3D524B; /* Warna latar belakang saat tombol dihover */
+    background-color: #0077B6; /* Warna latar belakang saat tombol dihover */
   }
 
   .tombolreset {
@@ -208,9 +208,8 @@ html, body{
     border-radius: 10px;
     transition: background-color 0.3s;
   }
-
   .btnone:hover {
-    background-color: #BEBEBE; /* Warna latar belakang saat tombol dihover */
+    background-color: #0077B6; /* Warna latar belakang saat tombol dihover */
   }
 
   /* buy out */
@@ -226,9 +225,8 @@ html, body{
     border-radius: 10px;
     transition: background-color 0.3s;
   }
-
   .btntwo:hover {
-    background-color: #006039; /* Warna latar belakang saat tombol dihover */
+    background-color: #0077B6; /* Warna latar belakang saat tombol dihover */
   }
 
   .btnfinish {
@@ -252,5 +250,5 @@ html, body{
   }
 
   .btnfinish button:hover {
-    background-color: #006039; /* Warna latar belakang saat tombol dihover */
+    background-color: #0077B6; /* Warna latar belakang saat tombol dihover */
   }

@@ -3,6 +3,8 @@
     display: grid;
     grid-template-rows: 1fr auto; /* 1fr for content, auto for footer */
     min-height: 100vh;
+    font-family: "Poppins";
+    color:#FFFFFF
 }
 
 .header {
@@ -61,10 +63,83 @@
     margin-bottom: 10px;
     margin-top: 10px;
     padding: 5%;
-    min-height: 15vh;
+    min-height: 25vh;
+    max-width:450px;
     background-color: #9CBBB3;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    transition: background-color 0.3s;
+}
+.item-tool:hover{
+    background-color: #0077B6;
+}
+
+.profile-item-tool{
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 5%;
+    min-height: 15vh;
+    max-width:450px;
+    background-color: #416269;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    transition: background-color 0.3s;
+}
+.profile-item-tool:hover{
+    background-color: #0077B6;
+}
+
+.myaux-item-tool{
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 5%;
+    width: 50vh;
+    min-height: 15vh;
+    background-color: #5F8586;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    transition: background-color 0.3s;
+}
+.myaux-item-tool:hover{
+    background-color: #0077B6;
+}
+
+.mybid-item-tool{
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 5%;
+    width: 50vh;
+    min-height: 15vh;
+    background-color: #A37E2C;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    transition: background-color 0.3s;
+}
+.mybid-item-tool:hover{
+    background-color: #0077B6;
+}
+
+.winning-item-tool{
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 5%;
+    width: 50vh;
+    min-height: 15vh;
+    background-color: #006039;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    transition: background-color 0.3s;
+}
+.winning-item-tool:hover{
+    background-color: #0077B6;
 }
 
 .footer {
@@ -98,7 +173,7 @@
 
 input[type="text"] {
     color: #3D524B;        /* Warna teks */
-    background: #9CBBB3; /* Warna latar belakang */
+    background: #FFFFFF; /* Warna latar belakang */
     border: 1px solid #3D524B; /* Warna border */
     padding: 5px;       /* Ruang di dalam input */
     border-radius: 10px; /* Sudut melengkung pada border */
@@ -216,3 +291,19 @@ input[type="text"] {
     color: #A37E2C;
     position: sticky;
 }
+
+.btn-bid {
+    width: 100px; 
+    height: 40px; 
+    padding: 10px; 
+    font-size: 16px; 
+    background-color: #1E2925;
+    color:#fff;
+    font-family: Poppins;
+    font-size: 16px;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+  }
+  .btn-bid:hover {
+    background-color: #0077B6; /* Warna latar belakang saat tombol dihover */
+  }

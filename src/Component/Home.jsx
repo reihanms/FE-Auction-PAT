@@ -23,10 +23,10 @@ export default function HomePage() {
 function Container() {
   const [auctions, setAuctions] = useState([]);
   useEffect(() => {
-    const fetchData = async() => {
+    const fetchData = async () => {
       const res = await getAllAuction();
       setAuctions(res.data);
-    }
+    };
     fetchData();
   }, []);
   return (
@@ -58,7 +58,7 @@ function Container() {
               style={{ height: "50px", margin: "auto" }}
             />
           </div>
-          <div className="item-tool">
+          <div className="profile-item-tool">
             <h3>Profile</h3>
             <img
               src="assets/profile.png"
@@ -66,7 +66,7 @@ function Container() {
               style={{ height: "50px", margin: "auto" }}
             />
           </div>
-          <div className="item-tool">
+          <div className="myaux-item-tool">
             <h3>My Auction</h3>
             <img
               src="assets/auction-icon.png"
@@ -74,10 +74,18 @@ function Container() {
               style={{ height: "50px", margin: "auto" }}
             />
           </div>
-          <div className="item-tool">
+          <div className="mybid-item-tool">
             <h3>My Bid</h3>
             <img
               src="assets/bid-icon.png"
+              alt="Your Bid"
+              style={{ height: "50px", margin: "auto" }}
+            />
+          </div>
+          <div className="winning-item-tool">
+            <h3>Winning Bid</h3>
+            <img
+              src="assets/icon-announce.png"
               alt="Your Bid"
               style={{ height: "50px", margin: "auto" }}
             />
@@ -104,7 +112,11 @@ function Item({ auction }) {
         <h5>{auction.title}</h5>
       </div>
       <div>
-        <h4>{auction.highest_bid === 0 ? formatToRupiah(auction.start_bid) : formatToRupiah(auction.highest_bid)}</h4>
+        <h4>
+          {auction.highest_bid === 0
+            ? formatToRupiah(auction.start_bid)
+            : formatToRupiah(auction.highest_bid)}
+        </h4>
         <h4>{formatToRupiah(auction.buy_out_price)}</h4>
       </div>
     </div>
