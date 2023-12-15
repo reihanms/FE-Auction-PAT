@@ -5,3 +5,6 @@ export const postSignup = (body) => post("/auth/signup", body);
 export const postLogin = (body) => post("/auth/login", body);
 export const getProfile = () => get("/auth/profile");
 export const putProfile = (body) => put("/auth/profile", body);
+
+export const getAllAuction = () => get("/auction");
+export const getAuction = (id) => get(`/auction/${id}`)
