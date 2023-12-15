@@ -20,7 +20,7 @@ export const BuyFinished = () => {
 
       <div className="btnfinish">
         <button><span style={{ fontFamily:"Poppins", fontSize:"40px" }}><b>AUCTION COMPLETE</b></span></button>
-      </div>
+      </div><br /><br />  
       <Footer/>
      
     </>
