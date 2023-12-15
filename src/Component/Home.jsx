@@ -72,12 +72,13 @@ function Item(){
             <div>
                 <h4>Art Name</h4>
                 <h5>Author Name</h5>
+                <h6 style={{ color:"black" }}>time</h6>
             </div>
             <div>
                 <h4>Current Price</h4>
                 <h4>Max Price</h4>
+                <button className="btn-bid">BID</button>
             </div>
-            
         </div>
     );
 }

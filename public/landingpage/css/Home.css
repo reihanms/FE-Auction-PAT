@@ -60,7 +60,8 @@
     margin-bottom: 10px;
     margin-top: 10px;
     padding: 5%;
-    min-height: 15vh;
+    min-height: 25vh;
+    max-width:450px;
     background-color: #9CBBB3;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -77,6 +78,7 @@
     margin-top: 10px;
     padding: 5%;
     min-height: 15vh;
+    max-width:450px;
     background-color: #416269;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -286,3 +288,19 @@ input[type="text"] {
     color: #A37E2C;
     position: sticky;
 }
+
+.btn-bid {
+    width: 100px; 
+    height: 40px; 
+    padding: 10px; 
+    font-size: 16px; 
+    background-color: #1E2925;
+    color:#fff;
+    font-family: Poppins;
+    font-size: 16px;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+  }
+  .btn-bid:hover {
+    background-color: #0077B6; /* Warna latar belakang saat tombol dihover */
+  }
