@@ -24,7 +24,7 @@ export const UserProfile = () => {
         />
         <div class="profile-username">
           <h2>{user?.username}</h2>
-          <p>{user?.email}</p>
+          <p>{user?.address}</p>
         </div>
       </div>
       <div class="card-container">

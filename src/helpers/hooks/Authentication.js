@@ -1,5 +1,6 @@
 import { create } from "zustand";
 import { getProfile, postLogin } from "../actions/api";
+import Swal from "sweetalert2";
 
 const useAuthStore = create((set) => {
   return {
@@ -16,13 +17,28 @@ const useAuthStore = create((set) => {
     login: async (payload) => {
       try {
         const response = await postLogin(payload);
+        console.log(response);
+        const { code, message } = response;
 
-        if (!response.error) {
+        if (code === 200) {
+          Swal.fire({
+            icon: "success",
+            title: "Login Berhasil!",
+            text: "Selamat datang",
+            confirmButtonText: "OK",
+          });
           const userProfile = await getProfile();
           set({ user: userProfile.data });
           return response;
-        } else {
-          return { error: response.error };
+        }
+        else {
+          Swal.fire({
+            icon: "error",
+            title: "Gagal",
+            text: message,
+            confirmButtonText: "Kembali",
+          });
+          return { error: message };
         }
       } catch (error) {
         console.error(error);

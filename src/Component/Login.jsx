@@ -3,9 +3,13 @@ import { useAuth } from "../helpers/hooks/Authentication";
 import { useLoading } from "../helpers/hooks/LoadingState";
 import { useFormik } from "formik";
 import { LoginSchema } from "../helpers/constants/Schemas";
+import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const Login = () => {
   const { login } = useAuth();
+  const navigate = useNavigate()
+
   const { setIsLoading } = useLoading();
   const initialData = {
     emailOrPhone: "",
@@ -25,7 +29,7 @@ const Login = () => {
       const response = await login(values);
 
       if (!response?.error) {
-        console.log(response);
+        navigate("/home")
       } else {
         console.error(response.error);
       }

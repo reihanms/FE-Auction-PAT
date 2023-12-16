@@ -4,6 +4,7 @@ import { Header } from "./Header";
 import { useParams } from "react-router-dom";
 import { formatToRupiah } from "../helpers/functions/ConvertRupiah";
 import { getAuction } from "../helpers/actions/api";
+import CountdownTimer from "./CountdownTimer";
 
 export const BuyItem = ({ id }) => {
   console.log(id);
@@ -17,7 +18,7 @@ export const BuyItem = ({ id }) => {
     };
     fetchData();
   }, [id]);
-  
+
   return (
     <>
       <Header />
@@ -32,7 +33,12 @@ export const BuyItem = ({ id }) => {
             alt="immage"
             class="img-fluid"
             className="in"
-            style={{ width: "100%", maxWidth: "500px" }}
+            style={{
+              width: "100%",
+              maxWidth: "500px",
+              maxHeight: "300px",
+              objectFit: "contain",
+            }}
           />
         </div>
         <div className="deskripsi">
@@ -51,7 +57,16 @@ export const BuyItem = ({ id }) => {
           </label>
         </div>
         <div class="deskripsi">
-          <input type="text" class="in" value={orderData?.highest_bid === 0 ? formatToRupiah(orderData.start_bid) : formatToRupiah(orderData?.highest_bid)} readOnly/>
+          <input
+            type="text"
+            class="in"
+            value={
+              orderData?.highest_bid === 0
+                ? formatToRupiah(orderData.start_bid)
+                : formatToRupiah(orderData?.highest_bid)
+            }
+            readOnly
+          />
         </div>
         <div>
           <label style={{ fontFamily: "Poppins" }}>
@@ -59,7 +74,12 @@ export const BuyItem = ({ id }) => {
           </label>
         </div>
         <div class="deskripsi">
-          <input type="text" class="in" value={formatToRupiah(orderData.buy_out_price)} readOnly />
+          <input
+            type="text"
+            class="in"
+            value={formatToRupiah(orderData.buy_out_price)}
+            readOnly
+          />
         </div>
       </div>
 
@@ -70,7 +90,9 @@ export const BuyItem = ({ id }) => {
         </label>
         <span>
           {" "}
-          <b> 1d 10h 24m 07s</b>
+          {orderData?.expired && (
+            <CountdownTimer expirationDate={orderData?.expired} />
+          )}
         </span>
       </div>
 
@@ -80,13 +102,27 @@ export const BuyItem = ({ id }) => {
           <button className="btnone">START BID</button>
         </div>
         <div class="deskripsi">
-          <input type="text" class="in" value={orderData?.highest_bid === 0 ? formatToRupiah(orderData.start_bid) : orderData?.highest_bid} readOnly />
+          <input
+            type="text"
+            class="in"
+            value={
+              orderData?.highest_bid === 0
+                ? formatToRupiah(orderData.start_bid)
+                : orderData?.highest_bid
+            }
+            readOnly
+          />
         </div>
         <div>
           <button className="btntwo">BUY OUT</button>
         </div>
         <div class="deskripsi">
-          <input type="text" class="in"value={formatToRupiah(orderData.buy_out_price)} readOnly />
+          <input
+            type="text"
+            class="in"
+            value={formatToRupiah(orderData.buy_out_price)}
+            readOnly
+          />
         </div>
       </div>
       <Footer />

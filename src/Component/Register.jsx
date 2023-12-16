@@ -1,13 +1,18 @@
 import { useFormik } from "formik";
 import React, { useEffect } from "react";
 import { postSignup } from "../helpers/actions/api";
+import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
 const Registerpage = () => {
+  const navigate = useNavigate()
   const initialData = {
     phone_number: "",
     username: "",
     email: "",
     password: "",
+    name: "",
+    address: ""
   };
   const formik = useFormik({
     initialValues: initialData,
@@ -26,6 +31,24 @@ const Registerpage = () => {
     await postSignup(values)
       .then((response) => {
         console.log(response);
+        const { code, message } = response;
+        if (code === 200) {
+          Swal.fire({
+            icon: "success",
+            title: "Pendaftaran Berhasil!",
+            text: "Silakan melakukan login",
+            confirmButtonText: "OK",
+          });
+          navigate("/login")
+        }
+        else {
+          Swal.fire({
+            icon: "error",
+            title: "Gagal",
+            text: message,
+            confirmButtonText: "Kembali",
+          });
+        }
       })
       .catch((error) => {
         console.log(error);
@@ -57,6 +80,14 @@ const Registerpage = () => {
           </div>
 
           <form onSubmit={formik.handleSubmit}>
+          <input
+              type="text"
+              className="logreg"
+              name="name"
+              placeholder="Full name"
+              value={formik.values.name}
+              onChange={formik.handleChange}
+            />
             <input
               type="text"
               className="logreg"
@@ -79,6 +110,14 @@ const Registerpage = () => {
               name="email"
               placeholder="Email"
               value={formik.values.email}
+              onChange={formik.handleChange}
+            />
+            <input
+              type="text"
+              className="logreg"
+              name="address"
+              placeholder="Your address. ex: Jl.Radja"
+              value={formik.values.address}
               onChange={formik.handleChange}
             />
             <input

@@ -5,6 +5,7 @@ import { OnSearchIndicator } from "./OnSearchIndicator";
 import { useAuth } from "../helpers/hooks/Authentication";
 import { getAllAuction } from "../helpers/actions/api";
 import { formatToRupiah } from "../helpers/functions/ConvertRupiah";
+import CountdownTimer from "./CountdownTimer";
 
 export default function HomePage() {
   return (
@@ -110,6 +111,9 @@ function Item({ auction }) {
       <div>
         <h4>{auction.title}</h4>
         <h5>{auction.title}</h5>
+        <h6 style={{ color:"black" }}>
+          <CountdownTimer expirationDate={auction.expired} />
+        </h6>
       </div>
       <div>
         <h4>
@@ -118,6 +122,7 @@ function Item({ auction }) {
             : formatToRupiah(auction.highest_bid)}
         </h4>
         <h4>{formatToRupiah(auction.buy_out_price)}</h4>
+        <button className="btn-bid">BID</button>
       </div>
     </div>
   );
