@@ -3,11 +3,11 @@ import { Header } from "./Header";
 import { Footer } from "./Footer";
 import { OnSearchIndicator } from "./OnSearchIndicator";
 import { useAuth } from "../helpers/hooks/Authentication";
-import { getAllAuction } from "../helpers/actions/api";
+import { getAllAuction, getMyBids } from "../helpers/actions/api";
 import { formatToRupiah } from "../helpers/functions/ConvertRupiah";
 import CountdownTimer from "./CountdownTimer";
 import { useNavigate } from "react-router-dom";
-export default function HomePage() {
+export default function MyBid() {
   return (
     // biar bisa bikin tag lebih dari satu pake <></>
     <>
@@ -22,11 +22,11 @@ export default function HomePage() {
 }
 
 function Container() {
-  const [auctions, setAuctions] = useState([]);
+  const [bids, setBids] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
-      const res = await getAllAuction();
-      setAuctions(res.data);
+      const res = await getMyBids();
+      setBids(res.data);
     };
     fetchData();
   }, []);
@@ -43,12 +43,12 @@ function Container() {
           {/* Ini buat nampilin search */}
           {/* <OnSearchIndicator/> */}
           {/* Ini buat list Item */}
-          {auctions.map((item, index) => (
+          {bids.map((item, index) => (
             <div key={index}>
-              {auctions.length === 0 ? (
-                <p>No Auctions</p>
+              {bids.length === 0 ? (
+                <p>No Bids</p>
               ) : (
-                <Item auction={item} />
+                <Item bid={item} />
               )}
             </div>
           ))}
@@ -104,7 +104,7 @@ function Container() {
   );
 }
 
-function Item({ auction }) {
+function Item({ bid }) {
   const navigate = useNavigate();
   return (
     <div className="item">
@@ -112,25 +112,20 @@ function Item({ auction }) {
       {/* Ini nanti datanya dinamis dari BE */}
       <img
         className="item-image"
-        src={auction.picture}
+        src={bid.auction_data.picture}
         alt="Auction Logo"
         style={{ width: "110px", margin: "auto" }}
       />
       <div>
-        <h4>{auction.title}</h4>
-        <h5>{auction.description}</h5>
-        <h6 style={{ color: "black" }}>
-          <CountdownTimer expirationDate={auction.expired} />
-        </h6>
+        <h4>{bid.auction_data.title}</h4>
+        <h5>{bid.auction_data.description}</h5>
       </div>
       <div>
         <h4>
-          {auction.highest_bid === 0
-            ? formatToRupiah(auction.start_bid)
-            : formatToRupiah(auction.bid_at)}
+         Your bid: {formatToRupiah(bid.bid_price)}
         </h4>
-        <h4>{formatToRupiah(auction.buy_out_price)}</h4>
-        <button className="btn-bid" onClick={() => navigate(`/buyitem/${auction.id}`)}>BID</button>
+        <h4>{formatToRupiah(bid.auction_data.highest_bid)}</h4>
+        <button className="btn-bid" onClick={() => navigate(`/buyitem/${bid.auction_id}`)}>BID</button>
       </div>
     </div>
   );

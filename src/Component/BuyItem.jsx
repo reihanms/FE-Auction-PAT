@@ -3,12 +3,21 @@ import { Footer } from "./Footer";
 import { Header } from "./Header";
 import { useParams } from "react-router-dom";
 import { formatToRupiah } from "../helpers/functions/ConvertRupiah";
-import { getAuction } from "../helpers/actions/api";
+import {
+  getAuction,
+  postBidAuction,
+  postBuyoutAuction,
+} from "../helpers/actions/api";
 import CountdownTimer from "./CountdownTimer";
+import { useFormik } from "formik";
+import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
 export const BuyItem = ({ id }) => {
+  const navigate = useNavigate();
   console.log(id);
   const [orderData, setOrderData] = useState({});
+  const [type, setType] = useState("");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -18,7 +27,89 @@ export const BuyItem = ({ id }) => {
     };
     fetchData();
   }, [id]);
+  const initialData = {
+    auction_id: parseInt(id, 10),
+    bid_price: "",
+  };
+  const formik = useFormik({
+    initialValues: initialData,
+    enableReinitialize: true,
+    onSubmit: (values, { props, resetForm, setErrors, setSubmitting }) =>
+      // console.log(values)
+      onSubmitBid(values, resetForm, setErrors, setSubmitting),
+  });
+  const onSubmitBid = async (values, resetForm, setErrors, setSubmitting) => {
+    if (type === "bid") {
+      await postBidAuction(values)
+        .then((response) => {
+          console.log(response);
+          const { code, message } = response;
+          if (code === 200) {
+            Swal.fire({
+              icon: "success",
+              title: "Bid Succesfully Created!",
+              text: "",
+              confirmButtonText: "OK",
+            });
+            navigate("/home");
+          } else {
+            Swal.fire({
+              icon: "error",
+              title: "Gagal",
+              text: message,
+              confirmButtonText: "Kembali",
+            });
+          }
+        })
+        .catch((error) => {
+          console.log(error);
+        })
+        .finally(() => setSubmitting(false));
+    } else {
+      await postBuyoutAuction(values)
+        .then((response) => {
+          console.log(response);
+          const { code, message } = response;
+          if (code === 200) {
+            Swal.fire({
+              icon: "success",
+              title: "Buyout auction success!",
+              text: "",
+              confirmButtonText: "OK",
+            });
+            navigate("/home");
+          } else {
+            Swal.fire({
+              icon: "error",
+              title: "Gagal",
+              text: message,
+              confirmButtonText: "Kembali",
+            });
+          }
+        })
+        .catch((error) => {
+          console.log(error);
+        })
+        .finally(() => setSubmitting(false));
+    }
+  };
 
+  const handleBid = () => {
+    formik.setFieldValue(
+      "bid_price",
+      orderData?.highest_bid === 0
+        ? orderData?.start_bid
+        : orderData?.bid_at
+    );
+    setType("bid");
+    formik.handleSubmit();
+  };
+  const handleBuyout = () => {
+    formik.setFieldValue(
+      "bid_price", orderData.buy_out_price);
+    setType("buyout");
+    formik.handleSubmit();
+  };
   return (
     <>
       <Header />
@@ -45,7 +136,12 @@ export const BuyItem = ({ id }) => {
           <label>
             <b>{orderData?.user?.name !== null ? orderData?.user?.name : ""}</b>
           </label>
-          <input type="textarea" className="textarea" />
+          <input
+            type="textarea"
+            className="textarea"
+            readOnly
+            value={orderData.description}
+          />
         </div>
       </div>
 
@@ -99,7 +195,9 @@ export const BuyItem = ({ id }) => {
       {/* Button */}
       <div className="item-container-bid">
         <div>
-          <button className="btnone">START BID</button>
+          <button className="btnone" onClick={() => handleBid("bid")}>
+            BID AT
+          </button>
         </div>
         <div class="deskripsi">
           <input
@@ -108,13 +206,15 @@ export const BuyItem = ({ id }) => {
             value={
               orderData?.highest_bid === 0
                 ? formatToRupiah(orderData.start_bid)
-                : orderData?.highest_bid
+                : formatToRupiah(orderData.bid_at)
             }
             readOnly
           />
         </div>
         <div>
-          <button className="btntwo">BUY OUT</button>
+          <button className="btntwo" onClick={() => handleBuyout()}>
+            BUY OUT
+          </button>
         </div>
         <div class="deskripsi">
           <input

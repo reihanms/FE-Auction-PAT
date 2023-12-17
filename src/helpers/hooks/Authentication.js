@@ -23,8 +23,8 @@ const useAuthStore = create((set) => {
         if (code === 200) {
           Swal.fire({
             icon: "success",
-            title: "Login Berhasil!",
-            text: "Selamat datang",
+            title: "Login Success!",
+            text: "Welcome",
             confirmButtonText: "OK",
           });
           const userProfile = await getProfile();

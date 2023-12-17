@@ -35,8 +35,8 @@ const Registerpage = () => {
         if (code === 200) {
           Swal.fire({
             icon: "success",
-            title: "Pendaftaran Berhasil!",
-            text: "Silakan melakukan login",
+            title: "Register Success!",
+            text: "Please login",
             confirmButtonText: "OK",
           });
           navigate("/login")
