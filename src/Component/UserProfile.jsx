@@ -1,8 +1,10 @@
 import React from "react";
 import { Footer } from "./Footer";
 import { useAuth } from "../helpers/hooks/Authentication";
+import { useNavigate } from "react-router-dom";
 // import defaultProfile from "../../public/assets/profiledefault.jpg";
 export const UserProfile = () => {
+  const navigate = useNavigate();
   const { user } = useAuth();
   return (
     <>
@@ -16,11 +18,13 @@ export const UserProfile = () => {
           src="/assets/av-logo-white.png"
           alt="Home"
           className="profile-logo"
+          onClick={() => navigate(`/home`)}
         />
         <img
           src="/assets/icon-home.png"
           alt="Home"
           className="profile-icon-home"
+          onClick={() => navigate(`/home`)}
         />
         <div class="profile-username">
           <h2>{user?.username}</h2>
@@ -65,7 +69,7 @@ export const UserProfile = () => {
 
       <div className="profile-button">
         <div className="col-md-4">
-          <div className="myaux-item-tool">
+          <div className="myaux-item-tool" onClick={() => navigate(`/myauction`)}>
             <h3 className="item-font">My Auction</h3>
             <img
               src="assets/auction-icon.png"
@@ -73,7 +77,7 @@ export const UserProfile = () => {
               style={{ height: "50px", margin: "auto" }}
             />
           </div>
-          <div className="mybid-item-tool">
+          <div className="mybid-item-tool" onClick={() => navigate(`/mybid`)}>
             <h3 className="item-font">My Bid</h3>
             <img
               src="assets/bid-icon.png"
@@ -81,7 +85,7 @@ export const UserProfile = () => {
               style={{ height: "50px", margin: "auto" }}
             />
           </div>
-          <div className="winning-item-tool">
+          <div className="winning-item-tool" onClick={() => navigate(`/mybidwon`)}>
             <h3 className="item-font">Winning Bid</h3>
             <img
               src="assets/icon-announce.png"

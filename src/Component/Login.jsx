@@ -71,7 +71,7 @@ const Login = () => {
 
             <div className="spacer">
               <input type="submit" className="logreg" value="Login" onClick={formik.handleSubmit} />
-              <div class="line-container">OR</div>
+              {/* <div class="line-container">OR</div>
               <button class="google-login-button">
                 <img
                   src="assets/icon-google.png"
@@ -80,7 +80,7 @@ const Login = () => {
                   value="Login With Google"
                 />
                 <b>Continue with Google</b>
-              </button>
+              </button> */}
               <p style={{ fontFamily: "Poppins", textAlign: "center" }}>
                 Don't have account?{" "}
                 <a href="/register" style={{ color: "#3D524B" }}>
