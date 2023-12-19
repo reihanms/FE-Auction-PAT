@@ -126,10 +126,10 @@ function Item({ auction }) {
       <div>
         <h4>
           {auction.highest_bid === 0
-            ? formatToRupiah(auction.start_bid)
-            : formatToRupiah(auction.bid_at)}
+            ? `Now : ${formatToRupiah(auction.start_bid)}`
+            : `Now : ${formatToRupiah(auction.bid_at)}`}
         </h4>
-        <h4>{formatToRupiah(auction.buy_out_price)}</h4>
+        <h4 style={{ color:"#006039" }}> {`Buy Out : ${formatToRupiah(auction.buy_out_price)}`}</h4>
         <button className="btn-bid" onClick={() => navigate(`/buyitem/${auction.id}`)}>BID</button>
       </div>
     </div>
@@ -140,12 +140,12 @@ function Item({ auction }) {
 function Search() {
   return (
     <div className="search-container">
-      <input
+      {/* <input
         type="text"
         name="search"
         id="search"
         placeholder="Find Arts Here"
-      />
+      /> */}
     </div>
   );
 }
@@ -156,12 +156,12 @@ function SearchInUser() {
     <div className="user-search-container">
       {/* manggil menu indicator, value nya di dinamisin dari fungsinya */}
       <MenuIndicator />
-      <input
+      {/* <input
         type="text"
         name="search"
         id="search"
         placeholder="Find Arts Here"
-      />
+      /> */}
     </div>
   );
 }

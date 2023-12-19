@@ -134,6 +134,7 @@ function Item({ auction }) {
         >
           {auction.is_complete ? "Closed" : "Bid"}
         </button>
+        <button className="btn-bid" onClick={() => navigate(`/invoice/${auction.id}`)}>Detail</button>
       </div>
     </div>
   );

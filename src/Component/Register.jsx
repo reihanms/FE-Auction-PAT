@@ -67,7 +67,7 @@ const Registerpage = () => {
               <b>Register Here</b>
             </h1>
             <br />
-            <button class="google-login-button">
+            {/* <button class="google-login-button">
               <img
                 src="assets/icon-google.png"
                 alt="Google Icon"
@@ -76,7 +76,7 @@ const Registerpage = () => {
               />
               <b>Continue with Google</b>
             </button>
-            <div class="line-container">OR</div>
+            <div class="line-container">OR</div> */}
           </div>
 
           <form onSubmit={formik.handleSubmit}>
