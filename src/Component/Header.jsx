@@ -11,7 +11,7 @@ export function Header(){
                 </div>
                 <div style={{display: "grid", gridTemplateColumns: "repeat(2, 1fr)", marginLeft: "auto", marginEnd: "0px"}}>
                     <h1 className="header-text">{user?.name}</h1>
-                    <img src="/assets/profile.png" style={{ height: "60px", margin: "auto"}}/>
+                    <img src={user?.profile_picture ? user.profile_picture : "/assets/profile.png"}  style={{ height: "60px", margin: "auto"}}/>
                 </div>
             </div>
     );
