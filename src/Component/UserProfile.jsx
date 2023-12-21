@@ -80,12 +80,6 @@ export const UserProfile = () => {
           className="profile-logo"
           onClick={() => navigate(`/home`)}
         />
-        <img
-          src="/assets/icon-home.png"
-          alt="Home"
-          className="profile-icon-home"
-          onClick={() => navigate(`/home`)}
-        />
         <div className="profile-username">
           {!isEdit ? (
             <div>
@@ -162,20 +156,23 @@ export const UserProfile = () => {
         {!isEdit ? (
           <p>{user?.about}</p>
         ) : (
-          <input
-            type="text"
+          <textarea
+            // type="text"
+            rows={8}
+            cols={70}
             value={formik.values.about}
             onChange={formik.handleChange}
             name="about"
+            className="profile-about-edit"
           />
         )}
       </div>
       {isEdit && (
-        <button onClick={formik.handleSubmit} type="submit">
-          Save Edit
+        <button onClick={formik.handleSubmit} className="button-circle button-profile-save" type="submit">
+          <img src="assets/save.svg"></img>
         </button>
       )}
-      <button onClick={() => setIsEdit(!isEdit)}>Edit Profile</button>
+      <button onClick={() => setIsEdit(!isEdit)} className="button-circle button-profile-edit"><img src="assets/pen-solid.svg"></img></button>
 
       <div className="profile-button">
         <div className="col-md-4">
