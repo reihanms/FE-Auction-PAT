@@ -111,7 +111,7 @@ function Item({ auction }) {
       />
       <div>
         <h4>{auction.title}</h4>
-        <h5>{auction.description}</h5>
+        <h5>{`${auction.description.slice(0,25)}...`}</h5>
         <h6 style={{ color: "black" }}>
           {auction.is_complete ? (
             <div>Auction Completed</div>

@@ -136,8 +136,7 @@ export const BuyItem = ({ id }) => {
           <label>
             <b>{orderData?.user?.name !== null ? orderData?.user?.name : ""}</b>
           </label>
-          <input
-            type="textarea"
+          <textarea
             className="textarea"
             readOnly
             value={orderData.description}
