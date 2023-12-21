@@ -96,10 +96,17 @@ body {
     font-family: Poppins;
     position: absolute;
     bottom: 0vh;
-    left: 50vh;
-    transform: translate(-50%, -50%);
+    left: 40vh;
     text-align: left;
-    color: #fff; /* Warna teks */
+    color: #ffffff; /* Warna teks */
+  }
+
+  .profile-username-edit {
+    font-family: Poppins;
+    position: absolute;
+    bottom: 0vh;
+    text-align: left;
+    color: #ffffff; /* Warna teks */
   }
   
   .profile-button{

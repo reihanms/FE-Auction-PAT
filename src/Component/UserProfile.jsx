@@ -86,7 +86,7 @@ export const UserProfile = () => {
           className="profile-icon-home"
           onClick={() => navigate(`/home`)}
         />
-        <div class="profile-username">
+        <div className="profile-username">
           {!isEdit ? (
             <div>
               <h2>{user?.name}</h2>
@@ -94,7 +94,7 @@ export const UserProfile = () => {
               <p>{user?.email}</p>
             </div>
           ) : (
-            <div>
+            <div className="profile-username-edit">
               <h2>
                 <input
                   type="text"
