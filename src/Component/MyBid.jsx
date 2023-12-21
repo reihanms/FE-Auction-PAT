@@ -118,7 +118,7 @@ function Item({ bid }) {
       />
       <div>
         <h4>{bid.auction_data.title}</h4>
-        <h5>{bid.auction_data.description}</h5>
+        <h5>{`${bid.auction_data.description.slice(0,25)}...`}</h5>
       </div>
       <div>
         <h4>
