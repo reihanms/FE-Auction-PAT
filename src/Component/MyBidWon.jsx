@@ -144,12 +144,12 @@ function Item({ auction }) {
 function Search() {
   return (
     <div className="search-container">
-      <input
+      {/* <input
         type="text"
         name="search"
         id="search"
         placeholder="Find Arts Here"
-      />
+      /> */}
     </div>
   );
 }

@@ -132,6 +132,9 @@ function Item({ auction }) {
         <h4 style={{ color:"#006039" }}> {`Buy Out : ${formatToRupiah(auction.buy_out_price)}`}</h4>
         <button className="btn-bid" onClick={() => navigate(`/buyitem/${auction.id}`)}>BID</button>
       </div>
+      <div className="category">
+            3D
+      </div>
     </div>
   );
 }
