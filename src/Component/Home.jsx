@@ -133,7 +133,7 @@ function Item({ auction }) {
         <button className="btn-bid" onClick={() => navigate(`/buyitem/${auction.id}`)}>BID</button>
       </div>
       <div className="category">
-            3D
+            {auction.category}
       </div>
     </div>
   );
