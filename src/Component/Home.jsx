@@ -12,14 +12,6 @@ export default function HomePage() {
     // biar bisa bikin tag lebih dari satu pake <></>
     <>
       <Header />
-      <h3 style={{ 
-        fontFamily: 'Arial, sans-serif',
-        fontSize: '24px',
-        color: '#333',
-        borderBottom: '2px solid #3498db',
-        paddingBottom: '5px',
-        marginBottom: '20px',
-       }}>Home Page</h3>
       <div className="body">
         {/* Buat nampilin item */}
         <Container />
@@ -115,7 +107,7 @@ function Container() {
 function Item({ auction }) {
   const navigate = useNavigate();
   return (
-    <div className="item">
+    <span className="item">
       {/* looping for auction items here */}
       {/* Ini nanti datanya dinamis dari BE */}
       <img
@@ -143,7 +135,7 @@ function Item({ auction }) {
       <div className="category">
             {auction.category}
       </div>
-    </div>
+    </span>
   );
 }
 
@@ -157,6 +149,7 @@ function Search() {
         id="search"
         placeholder="Find Arts Here"
       /> */}
+      <p className="page-title">Auctions</p>
     </div>
   );
 }

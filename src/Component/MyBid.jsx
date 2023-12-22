@@ -12,14 +12,6 @@ export default function MyBid() {
     // biar bisa bikin tag lebih dari satu pake <></>
     <>
       <Header />
-      <h3 style={{ 
-        fontFamily: 'Arial, sans-serif',
-        fontSize: '24px',
-        color: '#333',
-        borderBottom: '2px solid #3498db',
-        paddingBottom: '5px',
-        marginBottom: '20px',
-       }}>My Bid</h3>
       <div className="body">
         {/* Buat nampilin item */}
         <Container />
@@ -149,6 +141,7 @@ function Search() {
         id="search"
         placeholder="Find Arts Here"
       /> */}
+      <p className="page-title">Your Bid</p>
     </div>
   );
 }

@@ -13,7 +13,7 @@
     padding: 7px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    max-height: 15vh;
+    max-height: 10vh;
 }
 .header-text{
     color:#FFFFFF;
@@ -32,7 +32,7 @@
     background-color: #3D524B;
     margin: 15px;
     border-radius: 10px;
-    display: grid;
+    /* display: grid; */
     overflow: auto;
     max-height: 95vh;
     min-height: 95vh;
@@ -188,7 +188,8 @@ input[type="text"] {
     text-align: center;
     display: flex;
     text-align: center;
-    min-height: 15vh;
+    min-height: 35vh;
+    max-height: 35vh;
     position: sticky;
     top: 0;
     z-index: 1;
@@ -323,4 +324,11 @@ input[type="text"] {
     align-items: center;
     justify-content: center;
     display: flex;
+  }
+
+  .page-title{
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 6vh;
+    user-select: none;
   }

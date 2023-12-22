@@ -11,14 +11,6 @@ export default function MyBidWon() {
   return (
     // biar bisa bikin tag lebih dari satu pake <></>
     <>
-     <h3 style={{ 
-        fontFamily: 'Arial, sans-serif',
-        fontSize: '24px',
-        color: '#333',
-        borderBottom: '2px solid #3498db',
-        paddingBottom: '5px',
-        marginBottom: '20px',
-       }}>My Bid Won</h3>
       <Header />
       <div className="body">
         {/* Buat nampilin item */}
@@ -158,6 +150,7 @@ function Search() {
         id="search"
         placeholder="Find Arts Here"
       /> */}
+      <p className="page-title">Your Winning Bid</p>
     </div>
   );
 }

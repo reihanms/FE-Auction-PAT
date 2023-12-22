@@ -9,7 +9,7 @@ export function Header(){
                 <div>
                 <img src="/assets/av-logo.png" alt="Image" className="img-fluid header-logo" onClick={() => navigate(`/home`)}/>
                 </div>
-                <div style={{display: "grid", gridTemplateColumns: "repeat(2, 1fr)", marginLeft: "auto", marginEnd: "0px"}}>
+                <div style={{display: "grid", gridTemplateColumns: "repeat(2, 1fr)", marginLeft: "auto", marginEnd: "0px", alignContent: "right"}}>
                     <h1 className="header-text">{user?.name}</h1>
                     <img src={user?.profile_picture ? user.profile_picture : "/assets/profile.png"}  style={{ height: "60px", margin: "auto"}}/>
                 </div>
