@@ -47,7 +47,7 @@ export const BuyItem = ({ id }) => {
           if (code === 200) {
             Swal.fire({
               icon: "success",
-              title: "Bid Succesfully Created!",
+              title: "Bid Success!",
               text: "",
               confirmButtonText: "OK",
             });
