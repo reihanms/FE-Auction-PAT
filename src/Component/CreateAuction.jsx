@@ -50,9 +50,9 @@ const CreateAuction = () => {
         } else {
           Swal.fire({
             icon: "error",
-            title: "Gagal",
+            title: "Fail!",
             text: message,
-            confirmButtonText: "Kembali",
+            confirmButtonText: "Back",
           });
         }
       })

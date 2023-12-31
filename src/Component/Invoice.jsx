@@ -103,7 +103,7 @@ function InvoiceContainer({ id }) {
                 </td>
               </tr>
               <tr>
-                <td className="text-left">Biaya Servis</td>
+                <td className="text-left">Service Fees</td>
                 <td className="text-center">1</td>
                 <td className="text-right">
                   {formatToRupiah(orderData?.service_total)}
