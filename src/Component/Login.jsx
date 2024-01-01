@@ -18,7 +18,7 @@ const Login = () => {
   const formik = useFormik({
     initialValues: initialData,
     enableReinitialize: true,
-    validationSchema: LoginSchema,
+    // validationSchema: LoginSchema,
     onSubmit: (values, { props, resetForm, setErrors, setSubmitting }) =>
       // console.log(values)
       onSubmitLogin(values, resetForm, setErrors, setSubmitting),
