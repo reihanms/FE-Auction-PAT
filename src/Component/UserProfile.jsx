@@ -45,9 +45,9 @@ export const UserProfile = () => {
           formik.resetForm();
           Swal.fire({
             icon: "error",
-            title: "Gagal",
+            title: "Fail!",
             text: message,
-            confirmButtonText: "Kembali",
+            confirmButtonText: "Back",
           });
         }
       })

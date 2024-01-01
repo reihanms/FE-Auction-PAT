@@ -34,9 +34,9 @@ const useAuthStore = create((set) => {
         else {
           Swal.fire({
             icon: "error",
-            title: "Gagal",
+            title: "Fail!",
             text: message,
-            confirmButtonText: "Kembali",
+            confirmButtonText: "Back",
           });
           return { error: message };
         }

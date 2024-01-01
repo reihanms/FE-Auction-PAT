@@ -44,9 +44,9 @@ const Registerpage = () => {
         else {
           Swal.fire({
             icon: "error",
-            title: "Gagal",
+            title: "Fail!",
             text: message,
-            confirmButtonText: "Kembali",
+            confirmButtonText: "Back",
           });
         }
       })
@@ -120,6 +120,9 @@ const Registerpage = () => {
               value={formik.values.address}
               onChange={formik.handleChange}
             />
+            <p style={{ fontFamily: "Poppins",color : "848484" }}>
+            Password must be 8-16 characters long and contain one uppercase and one lowercase character{" "}
+              </p>
             <input
               type="password"
               className="logreg"
@@ -134,6 +137,12 @@ const Registerpage = () => {
               value="Register"
               onClick={formik.handleSubmit}
             />
+            <p style={{ fontFamily: "Poppins", textAlign: "center" }}>
+                Already have account?{" "}
+                <a href="/login" style={{ color: "#3D524B" }}>
+                  <b>Login</b>
+                </a>
+              </p>
           </form>
           <br />
         </div>
