@@ -11,6 +11,9 @@ import { InvoicePage } from './Pages/InvoicePage'
 import UserProfilePage from './Pages/UserProfilePage'
 
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import MyAuctionPage from './Pages/MyAuctionPage'
+import MyBidPage from './Pages/MyBidPage'
+import MyBidWonPage from './Pages/MyBidWonPage'
 
 const App = () => {
   return (
@@ -22,10 +25,13 @@ const App = () => {
         <Route path="/home" element={<HomePage/>}/>
         <Route path="/profile" element={<UserProfilePage/>}/>
         <Route path="/create" element={<CreateAuctionPage/>}/>
-        <Route path="/buyitem" element={<BuyItemPage/>}/>
+        <Route path="/buyitem/:id" element={<BuyItemPage/>}/>
         <Route path="/onbuyitem" element={<OnBuyItemPage/>}/>
         <Route path="/BuyFinished" element={<BuyFinishedPage/>}/>
-        <Route path="/invoice" element={<InvoicePage/>}/>
+        <Route path="/invoice/:id" element={<InvoicePage/>}/>
+        <Route path="/myauction" element={<MyAuctionPage />}/>
+        <Route path="/mybid" element={<MyBidPage />}/>
+        <Route path="/mybidwon" element={<MyBidWonPage />}/>
       </Routes>
     </Router>
   )
