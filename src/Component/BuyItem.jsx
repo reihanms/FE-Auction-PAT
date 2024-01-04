@@ -55,9 +55,9 @@ export const BuyItem = ({ id }) => {
           } else {
             Swal.fire({
               icon: "error",
-              title: "Gagal",
+              title: "Fail",
               text: message,
-              confirmButtonText: "Kembali",
+              confirmButtonText: "Back",
             });
           }
         })
@@ -81,9 +81,9 @@ export const BuyItem = ({ id }) => {
           } else {
             Swal.fire({
               icon: "error",
-              title: "Gagal",
+              title: "Fail",
               text: message,
-              confirmButtonText: "Kembali",
+              confirmButtonText: "Back",
             });
           }
         })

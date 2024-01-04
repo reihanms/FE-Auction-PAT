@@ -187,14 +187,14 @@ const CreateAuction = () => {
         </div>
       </div>{" "}
       <br />
-      <div className="tombolreset">
-        <button onClick={() => formik.resetForm()}>RESET</button>
-      </div>
-      <br />
       <div className="tombol">
         <button type="submit" onClick={formik.handleSubmit} disabled={formik.isSubmitting}>
           CREATE AUCTION
         </button>
+      </div>
+      <br />
+      <div className="tombolreset">
+        <button onClick={() => formik.resetForm()}>RESET</button>
       </div>
       <br />
       <Footer />
